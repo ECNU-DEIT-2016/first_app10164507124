@@ -1,0 +1,57 @@
+// Copyright (c) 2017, the Dart project authors.  Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+import 'package:angular/angular.dart';
+import 'package:angular_components/angular_components.dart';
+// import 'package:english_words/english_words.dart';
+
+// AngularDart info: https://webdev.dartlang.org/angular
+// Components info: https://webdev.dartlang.org/components
+
+@Component(
+  selector: 'btn-components',
+  styleUrls: const ['button_component.css'],
+  templateUrl: 'button_component.html',
+  // TODO: Remove MaterialIconComponent from directives.
+  // (Blocked on https://github.com/dart-lang/angular_components/issues/145.)
+  directives: const [CORE_DIRECTIVES, materialDirectives, MaterialIconComponent],
+  providers: const [materialProviders],
+)
+class ButtonComponent implements OnInit {
+  // var names = "NAME";
+  // <WordPair>[];
+  // final savedNames = "savedNAME";
+  // Set<WordPair>()
+
+  void generateNames() {
+    // names = generateWordPairs().take(5).toList();
+  }
+
+  // // @override
+  void ngOnInit() {
+    // generateNames();
+  }
+
+  void addToSaved(
+    // WordPair name
+    ) {
+    // savedNames.add(name);
+  }
+
+  void removeFromSaved(
+    // WordPair name
+    ) {
+    // savedNames.remove(name);
+  }
+
+  void toggleSavedState(
+    // WordPair name
+    ) {
+  //   if (savedNames.contains(name)) {
+  //     removeFromSaved(name);
+  //     return;
+  //   }
+  //   addToSaved(name);
+  }
+}
