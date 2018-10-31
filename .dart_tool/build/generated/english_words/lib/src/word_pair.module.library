@@ -1,0 +1,1 @@
+{"isEntrypoint":false,"deps":["english_words|lib/src/syllables.dart","english_words|lib/src/words/adjectives.dart","english_words|lib/src/words/adjectives_monosyllabic_safe.dart","english_words|lib/src/words/nouns.dart","english_words|lib/src/words/nouns_monosyllabic_safe.dart","english_words|lib/src/words/unsafe.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":["math"]}

@@ -4,7 +4,7 @@
 
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
-// import 'package:english_words/english_words.dart';
+import 'package:english_words/english_words.dart';
 
 // AngularDart info: https://webdev.dartlang.org/angular
 // Components info: https://webdev.dartlang.org/components
@@ -19,39 +19,37 @@ import 'package:angular_components/angular_components.dart';
   providers: const [materialProviders],
 )
 class ButtonComponent implements OnInit {
-  // var names = "NAME";
-  // <WordPair>[];
-  // final savedNames = "savedNAME";
-  // Set<WordPair>()
+  var names =  <WordPair>[];
+  final savedNames =  Set<WordPair>();
 
   void generateNames() {
-    // names = generateWordPairs().take(5).toList();
+    names = generateWordPairs().take(5).toList();
   }
 
-  // // @override
+  @override
   void ngOnInit() {
-    // generateNames();
+    generateNames();
   }
 
   void addToSaved(
-    // WordPair name
+    WordPair name
     ) {
-    // savedNames.add(name);
+    savedNames.add(name);
   }
 
   void removeFromSaved(
-    // WordPair name
+    WordPair name
     ) {
-    // savedNames.remove(name);
+    savedNames.remove(name);
   }
 
   void toggleSavedState(
-    // WordPair name
+    WordPair name
     ) {
-  //   if (savedNames.contains(name)) {
-  //     removeFromSaved(name);
-  //     return;
-  //   }
-  //   addToSaved(name);
+    if (savedNames.contains(name)) {
+      removeFromSaved(name);
+      return;
+    }
+    addToSaved(name);
   }
 }

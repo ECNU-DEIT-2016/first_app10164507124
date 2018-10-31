@@ -1,0 +1,1 @@
+{"isEntrypoint":false,"deps":["angular|lib/angular.dart","angular_components|lib/angular_components.dart","first_app|lib/src/Random_Generator/todo_list_service.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":["async","math"]}

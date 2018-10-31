@@ -1,0 +1,1 @@
+{"isEntrypoint":true,"deps":["english_words|lib/src/syllables.dart","english_words|lib/src/word_pair.dart","english_words|lib/src/words/adjectives.dart","english_words|lib/src/words/all.dart","english_words|lib/src/words/nouns.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[]}

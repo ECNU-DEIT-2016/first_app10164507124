@@ -1,0 +1,1 @@
+{"isEntrypoint":false,"deps":["english_words|lib/src/syllables/disyllabic.dart","english_words|lib/src/syllables/monosyllabic.dart","english_words|lib/src/syllables/problematic.dart","english_words|lib/src/syllables/trisyllabic.dart","string_scanner|lib/string_scanner.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[]}
