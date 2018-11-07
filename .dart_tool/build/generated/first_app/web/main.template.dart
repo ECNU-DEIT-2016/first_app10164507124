@@ -7,8 +7,10 @@ import 'main.dart';
 export 'main.dart';
 import 'package:angular/angular.dart';
 import 'package:first_app/app_component.template.dart' as ng;
+import 'package:first_app/app_component1.template.dart' as ng2;
 import 'package:angular/angular.template.dart' as _ref0;
 import 'package:first_app/app_component.template.dart' as _ref1;
+import 'package:first_app/app_component1.template.dart' as _ref2;
 
 var _visited = false;
 void initReflector() {
@@ -19,4 +21,5 @@ void initReflector() {
 
   _ref0.initReflector();
   _ref1.initReflector();
+  _ref2.initReflector();
 }

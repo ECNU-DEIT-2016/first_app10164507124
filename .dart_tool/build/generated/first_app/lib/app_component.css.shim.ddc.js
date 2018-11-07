@@ -7,7 +7,7 @@ define(['dart_sdk'], function(dart_sdk) {
   const app_component$46css$46shim = Object.create(_root);
   dart.defineLazy(app_component$46css$46shim, {
     /*app_component$46css$46shim.styles*/get styles() {
-      return ["._nghost-%ID%{}"];
+      return [""];
     }
   });
   dart.trackLibraries("packages/first_app/app_component.css.shim.ddc", {

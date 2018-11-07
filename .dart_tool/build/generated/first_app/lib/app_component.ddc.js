@@ -11,7 +11,7 @@ define(['dart_sdk'], function(dart_sdk) {
   dart.addTypeTests(app_component.AppComponent);
   dart.trackLibraries("packages/first_app/app_component.ddc", {
     "package:first_app/app_component.dart": app_component
-  }, '{"version":3,"sourceRoot":"","sources":["app_component.dart"],"names":[],"mappings":";;;;;;;;;EAgBA","file":"app_component.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["app_component.dart"],"names":[],"mappings":";;;;;;;;;EAiBA","file":"app_component.ddc.js"}');
   // Exports:
   return {
     app_component: app_component

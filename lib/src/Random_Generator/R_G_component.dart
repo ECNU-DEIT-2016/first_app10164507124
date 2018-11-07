@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:math' show Random;
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
@@ -29,11 +28,6 @@ class RGComponent {
   String newTodo = '';
 
   RGComponent(this.todoListService);
-
-  // @override
-  // Future<Null> ngOnInit() async {
-  //   items = await todoListService.getTodoList();
-  // }
 
   void add() {
     items.add(newTodo);

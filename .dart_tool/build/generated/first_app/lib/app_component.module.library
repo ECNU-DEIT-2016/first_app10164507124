@@ -1,1 +1,1 @@
-{"isEntrypoint":true,"deps":["angular|lib/angular.dart","first_app|lib/src/Random_Generator/R_G_component.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[]}
+{"isEntrypoint":true,"deps":["angular|lib/angular.dart","first_app|lib/src/todo_list/todo_list_component.dart","first_app|lib/src/todo_list/button_component.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[]}

@@ -5,7 +5,6 @@
 // ignore_for_file: cancel_subscriptions,constant_identifier_names,duplicate_import,non_constant_identifier_names,library_prefixes,UNUSED_IMPORT,UNUSED_SHOWN_NAME
 import 'R_G_component.dart';
 export 'R_G_component.dart';
-import 'dart:async';
 import 'dart:math' show Random;
 import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
