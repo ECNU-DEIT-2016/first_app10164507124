@@ -5,7 +5,6 @@ import 'dart:math' show Random;
 /// Override methods in this class to set up routes and initialize services like
 /// database connections. See http://aqueduct.io/docs/http/channel/.
 class MyServerChannel extends ApplicationChannel {
-
   /// Initialize services in this method.
   ///
   /// Implement this method to initialize services, read values from [options]
@@ -31,91 +30,54 @@ class MyServerChannel extends ApplicationChannel {
     // See: https://aqueduct.io/docs/http/request_controller/
     router
       .route("/users/[:id]").link(()=>MyController());
-      ;
+    router
+        .route("/random").link(()=>MySecondController());
 
     return router;
   }
 }
 
-class RGComponent {
-  //  int sides = 12, value;                    // 定义实例变量
-  //  String toString() => '$value';      // Define a method using shorthand syntax.
-  Die die = new Die();
-  
-  List<String> items = [];
-  List<String> names = ["李典康","蔡心蕊","戚晓颖","龙晶毅","唐莉雯","赵世宇","陈瑶","朱子恒","张静雅","郑可欣","周嘉翔"];
-  String newTodo = '';
 
-  void add() {
-    items.add(newTodo);
-    newTodo = '';
-  }
+class MySecondController extends ResourceController{
+//      List<String> things = Users.getAll();
+//      String randomThing = Users.read();
+      var results;
 
-  String get(int i){
-    return items[i];
-  }
 
-  RGComponent() {  
-    while(items.length < 10){      
-      newTodo = names[die.roll()]; 
-      if(!items.contains(newTodo)){items.add(newTodo);}
-      newTodo = '';
-    }     
-  }
-
-  String remove(int index) => items.removeAt(index);
-}
-
-class Die {                            // 定义一个类
-  static Random shaker = new Random(); // 定义一个类变量
-  int sides,num;  
-  String value;                  // 定义实例变量
-
-  String toString() => '$num';      // Define a method using shorthand syntax.
-  
-  Die({int n: 11}) {                   // Define a constructor.
-    if (n!=0) {
-      sides = n;
-    } else {
-      throw new ArgumentError(/* */);  // 支持 errors 和 exceptions.
-    }
-  }
-
-  int roll() {                         // 定义一个实例方法
-    return num = shaker.nextInt(sides); // 获取一个随机数。
+      @Operation.get()
+      Future<Response> getThings() async {
+        results = await GetData.getData();
+        var random = Random();
+        return Response.ok(results[random.nextInt(results.length)]);
   }
 }
 
 class MyController extends ResourceController {
-  List<String> things = [];
-  final RDGenerator = RGComponent();
 
-  MyController(){
-    int i = 0;
-    while(i<10){
-      addthings(RDGenerator.get(i));
-      i++;
-    }
-  }
+//  final Users _user;
+//  MyController(this._user);
+  var results;
+  var singleStu;
 
-  void addthings(String thing){
-    things.add(thing);
-  }
+//  String randomThing = Users.read();
+//  var results = Users.main();
 
   @Operation.get()
   Future<Response> getThings() async {
-    return Response.ok(things);
+//    return Response.ok(things);
+    results = await GetData.getData();
+    return Response.ok(results);
   }
 
   @Operation.get('id')
   Future<Response> getThing(@Bind.path('id') int id) async {
-    if (id < 0 || id >= things.length) {
+    singleStu = await GetData.selectStu(id);
+    if (id < 0 || id >= 12) {
+      print("Fail to find");
       return Response.notFound();
     }
-    if(things[id]!="周嘉翔")return Response.ok(things[id]);
-    else {
-      if(id<9)return Response.ok(things[id + 1]);
-      else return Response.ok(things[0]);
-    }
+    print(singleStu);
+    // var random = Random();
+    return Response.ok(singleStu);
   }
 }

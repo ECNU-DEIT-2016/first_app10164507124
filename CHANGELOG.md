@@ -14,3 +14,7 @@
     2. app.test1.dart是点名，app.test.dart是第一次加控件的作业。这次分开传上来
 
 - 12/12：第四、五次作业
+    第四次作业：
+        1.  运行bin中main.dart,在8002端口
+        2.  http://localhost:8002/users显示随机排列的全部学生名单
+        3.  加上/id后显示随机一名学生名字
